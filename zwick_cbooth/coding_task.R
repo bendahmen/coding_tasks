@@ -28,14 +28,15 @@ finance_survey[,factor_vars] <- lapply(finance_survey[,factor_vars], as.factor)
 #calculate wealth
 finance_survey$wealth <- asset_total - debt_total
 
-dummy <- finance_survey
-
-wmfnc <- function(vars) {
-  print(vars)
-  dummy %>%
-    group_by((vars), year) %>%
-    summarize(w_median = weighted.median(wealth, weight))
-}
-
 #calculate weighted medians by race and education
-wmeans <- lapply(dummy[,c("race", "education")],wmfnc)
+wmedians <- lapply(finance_survey[,c("race", "education")],function(vars){
+  finance_survey %>%
+    group_by((vars), year) %>%
+    summarize(w_median = weighted.median(wealth, weight))%>%
+    rename(het = "(vars)")%>%
+    ungroup()
+})
+
+#plot means by race
+ggplot(wmedians[[1]], aes(year, w_median, group=het, color=het)) + geom_line() + labs(x="Year", y="Mean Wealth") + scale_color_discrete(name="Race") + scale_y_continuous(labels = comma)
+ggsave("median_wealth_by_race.png")
