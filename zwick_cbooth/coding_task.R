@@ -28,15 +28,33 @@ finance_survey[,factor_vars] <- lapply(finance_survey[,factor_vars], as.factor)
 #calculate wealth
 finance_survey$wealth <- asset_total - debt_total
 
-#calculate weighted medians by race and education
-wmedians <- lapply(finance_survey[,c("race", "education")],function(vars){
-  finance_survey %>%
-    group_by((vars), year) %>%
-    summarize(w_median = weighted.median(wealth, weight))%>%
-    rename(het = "(vars)")%>%
-    ungroup()
-})
+#function that plots weighted means across education and race for given data
+wmedian_plotter <- function(data, outcome) {
+  #calculate weighted medians by race and education
+  wmedians <- lapply(data[,c("race", "education")], function(vars){
+    # enquote variables to be used with dplyr-functions
+    outcome <- enquo(outcome)
+    vars <- enquo(vars)
+    
+    median_ts <- data %>%
+      group_by(!!vars, year) %>%
+      summarize(w_median = weighted.median(!!outcome, weight))%>%
+      ungroup()
+    colnames(median_ts)[1] <- colnames(vars)
+    median_ts
+  })
+}
+
+#plot means for entire data (Q1)
+wealth_medians <- wmedian_plotter(finance_survey, wealth)
 
 #plot means by race
-ggplot(wmedians[[1]], aes(year, w_median, group=het, color=het)) + geom_line() + labs(x="Year", y="Mean Wealth") + scale_color_discrete(name="Race") + scale_y_continuous(labels = comma)
+ggplot(wealth_medians[[1]], aes(year, w_median, group=race, color=race)) + geom_line() + labs(x="Year", y="Mean Wealth") + scale_color_discrete(name="Race") + scale_y_continuous(labels = comma)
 ggsave("median_wealth_by_race.png")
+ggplot(wealth_medians[[2]], aes(year, w_median, group=het, color=het)) + geom_line() + labs(x="Year", y="Mean Wealth") + scale_color_discrete(name="Education") + scale_y_continuous(labels = comma)
+ggsave("median_wealth_by_educ.png")
+
+#plot means for Q2 subsample
+
+
+
