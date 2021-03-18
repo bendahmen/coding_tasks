@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.12.10)  18 MAR 2021 15:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.12.10)  18 MAR 2021 17:54
 entering extended mode
 **./answer.tex
 (answer.tex
@@ -263,46 +263,72 @@ KOMA-Script document classes (AR)
 \c@subfigure=\count188
 \c@subtable=\count189
 )
+("C:\Users\benda\AppData\Local\Programs\MiKTeX 2.9\tex/latex/geometry\geometry.
+sty"
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+("C:\Users\benda\AppData\Local\Programs\MiKTeX 2.9\tex/generic/iftex\ifvtex.sty
+"
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+ ("C:\Users\benda\AppData\Local\Programs\MiKTeX 2.9\tex/generic/iftex\iftex.sty
+"
+Package: iftex 2019/11/07 v1.0c TeX engine tests
+))
+\Gm@cnth=\count190
+\Gm@cntv=\count191
+\c@Gm@tempcnt=\count192
+\Gm@bindingoffset=\dimen148
+\Gm@wd@mp=\dimen149
+\Gm@odd@mp=\dimen150
+\Gm@even@mp=\dimen151
+\Gm@layoutwidth=\dimen152
+\Gm@layoutheight=\dimen153
+\Gm@layouthoffset=\dimen154
+\Gm@layoutvoffset=\dimen155
+\Gm@dimlist=\toks16
+
+("C:\Users\benda\AppData\Local\Programs\MiKTeX 2.9\tex/latex/geometry\geometry.
+cfg"))
 ("C:\Users\benda\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3backend\l3backen
 d-pdftex.def"
 File: l3backend-pdftex.def 2020-09-24 L3 backend support: PDF output (pdfTeX)
-\l__kernel_color_stack_int=\count190
+\l__kernel_color_stack_int=\count193
 \l__pdf_internal_box=\box49
 ) (answer.aux)
 \openout1 = `answer.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-Package scrbase Info: activating english \contentsname on input line 7.
-Package scrbase Info: activating english \listfigurename on input line 7.
-Package scrbase Info: activating english \listtablename on input line 7.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+Package scrbase Info: activating english \contentsname on input line 8.
+Package scrbase Info: activating english \listfigurename on input line 8.
+Package scrbase Info: activating english \listtablename on input line 8.
 
 ("C:\Users\benda\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-p
 df.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count191
-\scratchdimen=\dimen148
+\scratchcounter=\count194
+\scratchdimen=\dimen156
 \scratchbox=\box50
-\nofMPsegments=\count192
-\nofMParguments=\count193
-\everyMPshowfont=\toks16
-\MPscratchCnt=\count194
-\MPscratchDim=\dimen149
-\MPnumerator=\count195
-\makeMPintoPDFobject=\count196
-\everyMPtoPDFconversion=\toks17
+\nofMPsegments=\count195
+\nofMParguments=\count196
+\everyMPshowfont=\toks17
+\MPscratchCnt=\count197
+\MPscratchDim=\dimen157
+\MPnumerator=\count198
+\makeMPintoPDFobject=\count199
+\everyMPtoPDFconversion=\toks18
 )
 ("C:\Users\benda\AppData\Local\Programs\MiKTeX 2.9\tex/latex/epstopdf-pkg\epsto
 pdf-base.sty"
@@ -312,62 +338,119 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 )
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-<../median wealth finance_survey _by race .png, id=1, 477.9456pt x 196.3335pt>
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(49.27512pt, 498.9577pt, 49.27512pt)
+* v-part:(T,H,B)=(49.27512pt, 746.4967pt, 49.27512pt)
+* \paperwidth=597.50793pt
+* \paperheight=845.04694pt
+* \textwidth=498.9577pt
+* \textheight=746.4967pt
+* \oddsidemargin=-22.99487pt
+* \evensidemargin=-22.99487pt
+* \topmargin=-60.39488pt
+* \headheight=17.0pt
+* \headsep=20.40001pt
+* \topskip=11.0pt
+* \footskip=47.6pt
+* \marginparwidth=59.7508pt
+* \marginparsep=12.8401pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--19
+
+ []
+
+<../median wealth finance_survey _by race .png, id=1, 505.89pt x 505.89pt>
 File: ../median wealth finance_survey _by race .png Graphic file (type png)
 <use ../median wealth finance_survey _by race .png>
 Package pdftex.def Info: ../median wealth finance_survey _by race .png  used on
- input line 22.
-(pdftex.def)             Requested size: 204.94751pt x 84.18808pt.
+ input line 26.
+(pdftex.def)             Requested size: 244.49179pt x 142.26576pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 23.
+(Font)              <10.95> on input line 27.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 23.
+(Font)              <8> on input line 27.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 23.
-<../median wealth finance_survey _by education .png, id=2, 477.9456pt x 196.333
-5pt>
+(Font)              <6> on input line 27.
+<../median wealth finance_survey _by education .png, id=2, 505.89pt x 505.89pt>
+
 File: ../median wealth finance_survey _by education .png Graphic file (type png
 )
 <use ../median wealth finance_survey _by education .png>
 Package pdftex.def Info: ../median wealth finance_survey _by education .png  us
-ed on input line 26.
-(pdftex.def)             Requested size: 204.94751pt x 84.18808pt.
+ed on input line 30.
+(pdftex.def)             Requested size: 244.49179pt x 142.26576pt.
+<../change_median wealth finance_survey _by race .png, id=3, 505.89pt x 505.89p
+t>
+File: ../change_median wealth finance_survey _by race .png Graphic file (type p
+ng)
+<use ../change_median wealth finance_survey _by race .png>
+Package pdftex.def Info: ../change_median wealth finance_survey _by race .png  
+used on input line 34.
+(pdftex.def)             Requested size: 244.49179pt x 184.9455pt.
+<../change_median wealth finance_survey _by education .png, id=4, 505.89pt x 50
+5.89pt>
+File: ../change_median wealth finance_survey _by education .png Graphic file (t
+ype png)
+<use ../change_median wealth finance_survey _by education .png>
+Package pdftex.def Info: ../change_median wealth finance_survey _by education .
+png  used on input line 38.
+(pdftex.def)             Requested size: 244.49179pt x 184.9455pt.
 
-Overfull \hbox (14.36415pt too wide) in paragraph at lines 36--49
-[][] 
- []
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 [1
 
 {C:/Users/benda/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <../median w
 ealth finance_survey _by race .png> <../median wealth finance_survey _by educat
-ion .png>]
+ion .png> <../change_median wealth finance_survey _by race .png> <../change_med
+ian wealth finance_survey _by education .png>] [2]
 
 LaTeX3 Info: Redefining command \BeforeClosingMainAux with sig. 'm' on line
-(LaTeX3)     51.
+(LaTeX3)     64.
 
 
 LaTeX3 Info: Redefining command \BeforeClosingMainAux with sig. 'm' on line
-(LaTeX3)     51.
+(LaTeX3)     64.
 
  (answer.aux) ) 
 Here is how much of TeX's memory you used:
- 5277 strings out of 479702
- 112152 string characters out of 2865519
- 502950 words of memory out of 3000000
- 22369 multiletter control sequences out of 15000+200000
- 408312 words of font info for 43 fonts, out of 3000000 for 9000
+ 5803 strings out of 479702
+ 120608 string characters out of 2865519
+ 517796 words of memory out of 3000000
+ 22880 multiletter control sequences out of 15000+200000
+ 408658 words of font info for 44 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 106i,8n,111p,10603b,406s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 106i,9n,111p,10603b,409s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\benda\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknapp
 en/ec/dpi600\tcrm1095.pk><C:/Users/benda/AppData/Local/Programs/MiKTeX 2.9/font
 s/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/benda/AppData/Local/Programs/Mi
 KTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/benda/AppData/Loca
 l/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/benda/
-AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssbx10.pfb>
-Output written on answer.pdf (1 page, 89792 bytes).
+AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><
+C:/Users/benda/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmti10.pfb>
+Output written on answer.pdf (2 pages, 207892 bytes).
 PDF statistics:
- 31 PDF objects out of 1000 (max. 8388607)
+ 42 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -48,12 +48,18 @@ stat_calc <- function(data, outcome, heterogeneity) {
     stats <- data %>%
       group_by(.data[[vars]], year) %>%
       summarize(w_median = weighted.median(!!en_outcome, weight), w_mean = weighted.mean(!!en_outcome, weight))%>%
+      mutate(median_change = (w_median - lag(w_median))/lag(w_median)) %>%
       ungroup()
     
     #plot medians
     #commented for saving time
     ggplot(stats, aes(year, w_median, group=.data[[vars]], color=.data[[vars]])) + geom_line() + labs(x="Year", y=paste("median ", outcome_text)) + scale_y_continuous(labels = comma)
     ggsave(paste("median",outcome_text,data_text,"_by",vars,".png"))
+    
+    #plot change over time
+    ggplot(stats, aes(year, median_change, group=.data[[vars]], fill=.data[[vars]])) + geom_bar(stat="identity", position = "dodge") + labs(x="Year", y=paste("change in ", outcome_text)) + scale_y_continuous(labels = percent_format())
+    ggsave(paste("change_median",outcome_text,data_text,"_by",vars,".png"))
+    #return data
     stats
   })
 }
