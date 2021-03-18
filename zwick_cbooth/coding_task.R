@@ -32,16 +32,14 @@ finance_survey <- finance_survey %>%
 #function that plots weighted means across education and race for given data
 wmedian_calc <- function(data, outcome, heterogeneity) {
   #calculate weighted medians by race and education
-  wmedians <- lapply(data[,heterogeneity], function(vars){
+  wmedians <- lapply(heterogeneity, function(vars){
     # enquote variables to be used with dplyr-functions
     outcome <- enquo(outcome)
-    vars <- enquo(vars)
     
     data %>%
-      group_by(!!vars, year) %>%
+      group_by(.data[[vars]], year) %>%
       summarize(w_median = weighted.median(!!outcome, weight))%>%
-      ungroup() %>%
-      rename(het = "<fct>")
+      ungroup()
   })
 }
 
