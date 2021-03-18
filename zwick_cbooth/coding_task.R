@@ -81,4 +81,5 @@ hwealth_losses <- hwealth_25_bw_medians[[1]] %>%
   arrange(year) %>%
   mutate(one_yr_median_loss = lead(w_median) - w_median, one_yr_median_perc = (lead(w_median) - w_median)/w_median*100, three_year_median_loss = lead(w_median,3) - w_median, three_year_median_perc = (lead(w_median,3) - w_median)/w_median*100) %>%
   mutate(one_yrmean_loss = lead(w_mean) - w_mean, one_yrmean_perc = (lead(w_mean) - w_mean)/w_mean*100, three_yearmean_loss = lead(w_mean,3) - w_mean, three_yearmean_perc = (lead(w_mean,3) - w_mean)/w_mean*100) %>%
-  filter(year==2007)
+  filter(year==2007) %>%
+  select(-c("w_median","w_mean", "year"))
