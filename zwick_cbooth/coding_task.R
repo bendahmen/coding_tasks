@@ -9,8 +9,8 @@ rm(list=ls())
 
 # Install and load packages
 installation_needed  <- F
-loading_needed       <- TRUE
-package_list         <- c("tidyverse", "spatstat", "AER")
+loading_needed       <- T
+package_list         <- c("tidyverse", "spatstat", "AER", "scales")
 if(installation_needed){install.packages(package_list, repos='http://cran.us.r-project.org')}
 if(loading_needed){lapply(package_list, require, character.only = TRUE)}
 
@@ -31,50 +31,41 @@ finance_survey <- finance_survey %>%
 
 #function that plots weighted means across education and race for given data
 wmedian_calc <- function(data, outcome, heterogeneity) {
+  #deparse variables to use with ggplot
+  outcome_text <- deparse(substitute(outcome))
+  data_text <- deparse(substitute(data))
   #calculate weighted medians by race and education
   wmedians <- lapply(heterogeneity, function(vars){
-    # enquote variables to be used with dplyr-functions
-    outcome <- enquo(outcome)
+    #enquote variables to be used with dplyr-functions
+    en_outcome <- enquo(outcome)
     
-    data %>%
+    stats <- data %>%
       group_by(.data[[vars]], year) %>%
-      summarize(w_median = weighted.median(!!outcome, weight))%>%
+      summarize(w_median = weighted.median(!!en_outcome, weight))%>%
       ungroup()
+    
+    #plot medians
+    ggplot(stats, aes(year, w_median, group=.data[[vars]], color=.data[[vars]])) + geom_line() + labs(x="Year", y=paste("median ", outcome_text)) + scale_y_continuous(labels = comma)
+    ggsave(paste("median",outcome_text,data_text,"_by",vars,".png"))
+    stats
   })
 }
 
 #get wealth means for entire data (Q1)
 wealth_medians <- wmedian_calc(finance_survey, wealth, c("race", "education"))
 
-#plot means by race and education
-ggplot(wealth_medians[[1]], aes(year, w_median, group=het, color=het)) + geom_line() + labs(x="Year", y="Mean Wealth") + scale_color_discrete(name="Race") + scale_y_continuous(labels = comma)
-ggsave("median_wealth_by_race.png")
-ggplot(wealth_medians[[2]], aes(year, w_median, group=het, color=het)) + geom_line() + labs(x="Year", y="Mean Wealth") + scale_color_discrete(name="Education") + scale_y_continuous(labels = comma)
-ggsave("median_wealth_by_educ.png")
-
 #create subsample for Q2 - black and white individuals only
 finance_survey_bw <- finance_survey %>%
   filter(race=="black"|race=="white")
 
-#get housing wealth means for Q2
+#get housing wealth medians for Q2
 hwealth_medians <- wmedian_calc(finance_survey_bw, hwealth, c("race"))
-
-#plot hwealth by race
-ggplot(hwealth_medians[[1]], aes(year, w_median, group=het, color=het)) + geom_line() + labs(x="Year", y="Mean Housing Wealth") + scale_color_discrete(name="Race") + scale_y_continuous(labels = comma)
-ggsave("median_hwealth_by_race_bw.png")
 
 #create subsample for Q3 - black and white individuals aged 25 or older only
 finance_survey_bw_25 <- finance_survey_bw %>%
   filter(age>=25)
 
-#get wealth and housing wealth means by race
+#get wealth and housing wealth medians by race
 wealth_25_medians <- wmedian_calc(finance_survey_bw_25, wealth, c("race"))
 hwealth_25_medians <- wmedian_calc(finance_survey_bw_25, hwealth, c("race"))
-
-#plot wealth and housing wealth by race
-ggplot(wealth_25_medians[[1]], aes(year, w_median, group=het, color=het)) + geom_line() + labs(x="Year", y="Mean Wealth") + scale_color_discrete(name="Race") + scale_y_continuous(labels = comma)
-ggsave("median_wealth_by_race_bw_25.png")
-
-ggplot(hwealth_25_medians[[1]], aes(year, w_median, group=het, color=het)) + geom_boxplot() + labs(x="Year", y="Mean Housing Wealth") + scale_color_discrete(name="Race") + scale_y_continuous(labels = comma)
-ggsave("median_hwealth_by_race_bw_25.png")
 
