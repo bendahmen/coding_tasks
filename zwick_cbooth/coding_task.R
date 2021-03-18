@@ -10,7 +10,7 @@ rm(list=ls())
 # Install and load packages
 installation_needed  <- F
 loading_needed       <- T
-package_list         <- c("tidyverse", "spatstat", "AER", "scales")
+package_list         <- c("tidyverse", "spatstat", "AER", "scales", "stargazer", "ggthemes")
 if(installation_needed){install.packages(package_list, repos='http://cran.us.r-project.org')}
 if(loading_needed){lapply(package_list, require, character.only = TRUE)}
 
@@ -20,6 +20,9 @@ rm(list=ls())
 #load data 
 finance_survey <- read_csv("RA_21_22.csv")
 attach(finance_survey)
+
+#GGplot theme
+theme_set(theme_fivethirtyeight())
 
 ########### DATA CLEANING ################
 
@@ -49,8 +52,8 @@ stat_calc <- function(data, outcome, heterogeneity) {
     
     #plot medians
     #commented for saving time
-    #ggplot(stats, aes(year, w_median, group=.data[[vars]], color=.data[[vars]])) + geom_line() + labs(x="Year", y=paste("median ", outcome_text)) + scale_y_continuous(labels = comma)
-    #ggsave(paste("median",outcome_text,data_text,"_by",vars,".png"))
+    ggplot(stats, aes(year, w_median, group=.data[[vars]], color=.data[[vars]])) + geom_line() + labs(x="Year", y=paste("median ", outcome_text)) + scale_y_continuous(labels = comma)
+    ggsave(paste("median",outcome_text,data_text,"_by",vars,".png"))
     stats
   })
 }
@@ -79,7 +82,9 @@ hwealth_25_bw_medians <- stat_calc(finance_survey_bw_25, hwealth, c("race", "edu
 hwealth_losses <- hwealth_25_bw_medians[[1]] %>%
   group_by(race) %>%
   arrange(year) %>%
-  mutate(one_yr_median_loss = lead(w_median) - w_median, one_yr_median_perc = (lead(w_median) - w_median)/w_median*100, three_year_median_loss = lead(w_median,3) - w_median, three_year_median_perc = (lead(w_median,3) - w_median)/w_median*100) %>%
-  mutate(one_yrmean_loss = lead(w_mean) - w_mean, one_yrmean_perc = (lead(w_mean) - w_mean)/w_mean*100, three_yearmean_loss = lead(w_mean,3) - w_mean, three_yearmean_perc = (lead(w_mean,3) - w_mean)/w_mean*100) %>%
+  mutate(three_yr_median_loss = lead(w_median) - w_median, three_yr_median_perc = (lead(w_median) - w_median)/w_median*100, nince_yr_median_loss = lead(w_median,3) - w_median, nince_yr_median_perc = (lead(w_median,3) - w_median)/w_median*100) %>%
+  mutate(three_yr_mean_loss = lead(w_mean) - w_mean, three_yr_mean_perc = (lead(w_mean) - w_mean)/w_mean*100, nince_yr_mean_loss = lead(w_mean,3) - w_mean, nince_yr_mean_perc = (lead(w_mean,3) - w_mean)/w_mean*100) %>%
   filter(year==2007) %>%
   select(-c("w_median","w_mean", "year"))
+
+stargazer(hwealth_losses,title = "Housing Wealth Losses per Race", out = "hwealth_loss.tex", summary = F, header = F)
