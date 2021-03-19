@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.12.10)  18 MAR 2021 17:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.12.10)  19 MAR 2021 12:01
 entering extended mode
 **./answer.tex
 (answer.tex
@@ -405,7 +405,7 @@ ng)
 <use ../change_median wealth finance_survey _by race .png>
 Package pdftex.def Info: ../change_median wealth finance_survey _by race .png  
 used on input line 34.
-(pdftex.def)             Requested size: 244.49179pt x 184.9455pt.
+(pdftex.def)             Requested size: 244.49179pt x 142.26576pt.
 <../change_median wealth finance_survey _by education .png, id=4, 505.89pt x 50
 5.89pt>
 File: ../change_median wealth finance_survey _by education .png Graphic file (t
@@ -413,33 +413,120 @@ ype png)
 <use ../change_median wealth finance_survey _by education .png>
 Package pdftex.def Info: ../change_median wealth finance_survey _by education .
 png  used on input line 38.
-(pdftex.def)             Requested size: 244.49179pt x 184.9455pt.
+(pdftex.def)             Requested size: 244.49179pt x 142.26576pt.
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+Underfull \hbox (badness 10000) in paragraph at lines 44--45
 
+ []
+
+<../median hwealth finance_survey_bw _by race .png, id=5, 505.89pt x 505.89pt>
+File: ../median hwealth finance_survey_bw _by race .png Graphic file (type png)
+
+<use ../median hwealth finance_survey_bw _by race .png>
+Package pdftex.def Info: ../median hwealth finance_survey_bw _by race .png  use
+d on input line 53.
+(pdftex.def)             Requested size: 244.49179pt x 142.26576pt.
+<../median hwealth finance_survey_bw _by education .png, id=6, 505.89pt x 505.8
+9pt>
+File: ../median hwealth finance_survey_bw _by education .png Graphic file (type
+ png)
+<use ../median hwealth finance_survey_bw _by education .png>
+Package pdftex.def Info: ../median hwealth finance_survey_bw _by education .png
+  used on input line 57.
+(pdftex.def)             Requested size: 244.49179pt x 142.26576pt.
+<../change_median hwealth finance_survey_bw _by race .png, id=7, 505.89pt x 505
+.89pt>
+File: ../change_median hwealth finance_survey_bw _by race .png Graphic file (ty
+pe png)
+<use ../change_median hwealth finance_survey_bw _by race .png>
+Package pdftex.def Info: ../change_median hwealth finance_survey_bw _by race .p
+ng  used on input line 61.
+(pdftex.def)             Requested size: 244.49179pt x 142.26576pt.
+<../change_median hwealth finance_survey_bw _by education .png, id=8, 505.89pt 
+x 505.89pt>
+File: ../change_median hwealth finance_survey_bw _by education .png Graphic fil
+e (type png)
+<use ../change_median hwealth finance_survey_bw _by education .png>
+Package pdftex.def Info: ../change_median hwealth finance_survey_bw _by educati
+on .png  used on input line 65.
+(pdftex.def)             Requested size: 244.49179pt x 142.26576pt.
 [1
 
 {C:/Users/benda/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <../median w
 ealth finance_survey _by race .png> <../median wealth finance_survey _by educat
 ion .png> <../change_median wealth finance_survey _by race .png> <../change_med
-ian wealth finance_survey _by education .png>] [2]
+ian wealth finance_survey _by education .png>]
+Underfull \hbox (badness 10000) in paragraph at lines 75--76
+
+ []
+
+<../median hwealth finance_survey_bw_25 _by race .png, id=22, 505.89pt x 505.89
+pt>
+File: ../median hwealth finance_survey_bw_25 _by race .png Graphic file (type p
+ng)
+<use ../median hwealth finance_survey_bw_25 _by race .png>
+Package pdftex.def Info: ../median hwealth finance_survey_bw_25 _by race .png  
+used on input line 84.
+(pdftex.def)             Requested size: 244.49179pt x 142.26576pt.
+<../change_median hwealth finance_survey_bw_25 _by race .png, id=23, 505.89pt x
+ 505.89pt>
+File: ../change_median hwealth finance_survey_bw_25 _by race .png Graphic file 
+(type png)
+<use ../change_median hwealth finance_survey_bw_25 _by race .png>
+Package pdftex.def Info: ../change_median hwealth finance_survey_bw_25 _by race
+ .png  used on input line 88.
+(pdftex.def)             Requested size: 244.49179pt x 142.26576pt.
+<../median non_hwealth finance_survey_bw_25 _by race .png, id=24, 505.89pt x 50
+5.89pt>
+File: ../median non_hwealth finance_survey_bw_25 _by race .png Graphic file (ty
+pe png)
+<use ../median non_hwealth finance_survey_bw_25 _by race .png>
+Package pdftex.def Info: ../median non_hwealth finance_survey_bw_25 _by race .p
+ng  used on input line 92.
+(pdftex.def)             Requested size: 244.49179pt x 142.26576pt.
+<../change_median non_hwealth finance_survey_bw_25 _by race .png, id=25, 505.89
+pt x 505.89pt>
+File: ../change_median non_hwealth finance_survey_bw_25 _by race .png Graphic f
+ile (type png)
+<use ../change_median non_hwealth finance_survey_bw_25 _by race .png>
+Package pdftex.def Info: ../change_median non_hwealth finance_survey_bw_25 _by 
+race .png  used on input line 96.
+(pdftex.def)             Requested size: 244.49179pt x 142.26576pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 123--124
+
+ []
+
+[2 <../median hwealth finance_survey_bw _by race .png> <../median hwealth finan
+ce_survey_bw _by education .png> <../change_median hwealth finance_survey_bw _b
+y race .png> <../change_median hwealth finance_survey_bw _by education .png>]
+[3 <../median hwealth finance_survey_bw_25 _by race .png> <../change_median hwe
+alth finance_survey_bw_25 _by race .png> <../median non_hwealth finance_survey_
+bw_25 _by race .png> <../change_median non_hwealth finance_survey_bw_25 _by rac
+e .png>]
 
 LaTeX3 Info: Redefining command \BeforeClosingMainAux with sig. 'm' on line
-(LaTeX3)     64.
+(LaTeX3)     127.
 
 
 LaTeX3 Info: Redefining command \BeforeClosingMainAux with sig. 'm' on line
-(LaTeX3)     64.
+(LaTeX3)     127.
 
  (answer.aux) ) 
 Here is how much of TeX's memory you used:
- 5803 strings out of 479702
- 120608 string characters out of 2865519
- 517796 words of memory out of 3000000
- 22880 multiletter control sequences out of 15000+200000
+ 5853 strings out of 479702
+ 123486 string characters out of 2865519
+ 519812 words of memory out of 3000000
+ 22922 multiletter control sequences out of 15000+200000
  408658 words of font info for 44 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 106i,9n,111p,10603b,409s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 106i,8n,111p,10603b,411s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\benda\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknapp
 en/ec/dpi600\tcrm1095.pk><C:/Users/benda/AppData/Local/Programs/MiKTeX 2.9/font
 s/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/benda/AppData/Local/Programs/Mi
@@ -448,9 +535,9 @@ l/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/benda/
 AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><
 C:/Users/benda/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
 /cmti10.pfb>
-Output written on answer.pdf (2 pages, 207892 bytes).
+Output written on answer.pdf (3 pages, 468151 bytes).
 PDF statistics:
- 42 PDF objects out of 1000 (max. 8388607)
+ 61 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 61 words of extra memory for PDF output out of 10000 (max. 10000000)
 

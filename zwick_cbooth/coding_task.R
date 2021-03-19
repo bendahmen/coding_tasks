@@ -32,7 +32,7 @@ finance_survey[,factor_vars] <- lapply(finance_survey[,factor_vars], as.factor)
 
 #calculate wealth
 finance_survey <- finance_survey %>%
-  mutate(wealth = (asset_total - debt_total), hwealth = (asset_housing - debt_housing))
+  mutate(wealth = (asset_total - debt_total), hwealth = (asset_housing - debt_housing), non_hwealth = (wealth - hwealth))
 
 ########### FUNCTIONS ################
 #function that plots weighted means across education and race for given data
@@ -74,15 +74,15 @@ finance_survey_bw <- finance_survey %>%
   filter(race=="black"|race=="white")
 
 #get housing wealth medians for Q2
-hwealth_medians <- stat_calc(finance_survey_bw, hwealth, c("race"))
+hwealth_medians <- stat_calc(finance_survey_bw, hwealth, c("race", "education"))
 
-#create subsample for Q3 - black and white individuals aged 25 or older only
+#create subsample for Q3 - black and white homeowners aged 25 or older only
 finance_survey_bw_25 <- finance_survey_bw %>%
-  filter(age>=25)
+  filter(age>=25, asset_housing!=0)
 
 #get wealth and housing wealth medians by race and education
-wealth_25_bw_medians <- stat_calc(finance_survey_bw_25, wealth, c("race", "education"))
 hwealth_25_bw_medians <- stat_calc(finance_survey_bw_25, hwealth, c("race", "education"))
+non_hwealth_25_bw_medians <- stat_calc(finance_survey_bw_25, non_hwealth, c("race", "education"))
 
 #analyze loss in housing wealth
 hwealth_losses <- hwealth_25_bw_medians[[1]] %>%
@@ -91,6 +91,6 @@ hwealth_losses <- hwealth_25_bw_medians[[1]] %>%
   mutate(three_yr_median_loss = lead(w_median) - w_median, three_yr_median_perc = (lead(w_median) - w_median)/w_median*100, nince_yr_median_loss = lead(w_median,3) - w_median, nince_yr_median_perc = (lead(w_median,3) - w_median)/w_median*100) %>%
   mutate(three_yr_mean_loss = lead(w_mean) - w_mean, three_yr_mean_perc = (lead(w_mean) - w_mean)/w_mean*100, nince_yr_mean_loss = lead(w_mean,3) - w_mean, nince_yr_mean_perc = (lead(w_mean,3) - w_mean)/w_mean*100) %>%
   filter(year==2007) %>%
-  select(-c("w_median","w_mean", "year"))
+  select(-c("w_median","w_mean", "year", "median_change"))
 
 stargazer(hwealth_losses,title = "Housing Wealth Losses per Race", out = "hwealth_loss.tex", summary = F, header = F)
